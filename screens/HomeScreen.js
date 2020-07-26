@@ -28,7 +28,6 @@ export default class HomeScreen extends Component{
   keyExtractor = (item, index) => index.toString()
 
   renderItem = ( {item, i} ) =>{
-    console.log(item.username)
     return (
       <ListItem
         key={i}
@@ -39,7 +38,7 @@ export default class HomeScreen extends Component{
             <TouchableOpacity style={styles.button}
             onPress ={()=>{
                this.props.navigation.navigate("ReceiverDetails",{"details": item})
-             ;console.log("this are items ",item.username)}}>
+             ;}}>
               <Text style={{color:'#ffff'}}>View</Text>
             </TouchableOpacity>
           }
